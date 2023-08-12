@@ -12,7 +12,7 @@ content-type: application/json
 
 
 ### Get a Particular User with a given ID
-GET http://localhost:3000/auth/1
+GET http://localhost:3000/auth/1123
 
 
 ### Get all User with a given email
@@ -20,11 +20,11 @@ GET http://localhost:3000/auth?email=carl@carl.net
 
 
 ### Delete a User with a given ID
-DELETE http://localhost:3000/auth/1
+DELETE http://localhost:3000/auth/1123
 
 
 ### Update a users email
-PATCH http://localhost:3000/auth/2
+PATCH http://localhost:3000/auth/1123
 content-type: application/json
 
 {
