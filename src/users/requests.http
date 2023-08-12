@@ -1,7 +1,7 @@
 
 
 
-### Create a new message
+### Create a new user
 POST http://localhost:3000/auth/signup
 content-type: application/json
 
@@ -11,7 +11,41 @@ content-type: application/json
 }
 
 
-### Get a Particular Messages
-GET http://localhost:3000/auth/
+### Get a Particular User with a given ID
+GET http://localhost:3000/auth/1
 
 
+### Get all User with a given email
+GET http://localhost:3000/auth?email=carl@carl.net
+
+
+### Delete a User with a given ID
+DELETE http://localhost:3000/auth/1
+
+
+### Update a users email
+PATCH http://localhost:3000/auth/2
+content-type: application/json
+
+{
+    "email": "carlos@carl.net"
+}
+
+
+### Update a users password
+PATCH http://localhost:3000/auth/2
+content-type: application/json
+
+{
+    "password": "1235"
+}
+
+
+### Update a users email and password
+PATCH http://localhost:3000/auth/2
+content-type: application/json
+
+{
+    "email": "carl@carl.net",
+    "password": "1234"
+}
