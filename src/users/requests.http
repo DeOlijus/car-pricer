@@ -12,7 +12,7 @@ content-type: application/json
 
 
 ### Get a Particular User with a given ID
-GET http://localhost:3000/auth/1123
+GET http://localhost:3000/auth/4
 
 
 ### Get all User with a given email
@@ -48,4 +48,22 @@ content-type: application/json
 {
     "email": "carl@carl.net",
     "password": "1234"
+}
+
+
+### Create a new user (Passing in a content object we can parse)
+POST http://localhost:3000/auth/signup
+content-type: application/json
+
+{
+    "content": {
+        "username": "Damian.Wayne@GothamKnight.com",
+        "password": "1234",
+        "firstName": "damian",
+        "lastName": "wayne",
+        "phone": "123-123-1234",
+        "email": "test@test.com",
+        "website": "GothamKnight.com"
+    }
+
 }
